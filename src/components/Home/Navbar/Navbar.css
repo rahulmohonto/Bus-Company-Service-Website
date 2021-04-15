@@ -1,0 +1,9 @@
+.navbar-container{
+    background-color: rgb(54, 87, 88);
+    margin-top: .5rem;
+    border-radius: 10px;
+}
+.busLogo{
+    height:60px;
+    width:60px;
+}

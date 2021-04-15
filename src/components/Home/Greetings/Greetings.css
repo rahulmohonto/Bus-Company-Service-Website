@@ -1,0 +1,15 @@
+.greetings-section{
+    height:400px;
+    background-color: ghostwhite;
+    
+    border-radius:10px;
+}
+.text{
+    color:rgb(14, 38, 83);
+}
+.bus-rent-icon{
+    border-radius: 50%;
+    margin-left:15%;
+    width:4rem;
+    height:4rem;
+}
