@@ -10,6 +10,8 @@ import {
     Link
 } from "react-router-dom";
 import Home from '../../Home/Home/Home';
+import PrivateRoute from '../../PrivateRoute/PrivateRoute';
+
 
 
 const Admin = () => {
@@ -20,15 +22,15 @@ const Admin = () => {
 
                 {/* <Route path="/home">
                     <Home /></Route> */}
-                <Route path="/orderedServices">
+                <PrivateRoute path="/orderedServices">
                     <OrderedServices></OrderedServices>
-                </Route>
-                <Route path="/allServices">
+                </PrivateRoute>
+                <PrivateRoute path="/allServices">
                     <AllServices></AllServices>
-                </Route>
-                <Route path="/addServices">
+                </PrivateRoute>
+                <PrivateRoute path="/addServices">
                     <AddServices></AddServices>
-                </Route>
+                </PrivateRoute>
             </Switch>
         </Router>
 

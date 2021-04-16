@@ -2,13 +2,10 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
-
-
-const AddServices = () => {
+const AddReview = () => {
 
     const { register, handleSubmit } = useForm();
     const [image, setImage] = useState(null);
-
     const onSubmit = data => {
         console.log(data)
         const eventData = {
@@ -16,9 +13,9 @@ const AddServices = () => {
             image: image,
             description: data.description,
             serviceType: data.serviceType,
-            quantity: data.quantity
+            satisfactionLevel: data.satisfactionLevel
         }
-        const url = `http://localhost:5700/addServices`;
+        const url = `http://localhost:5700/addReviews`;
         console.log(eventData)
         fetch(url, {
             method: 'POST',
@@ -30,7 +27,6 @@ const AddServices = () => {
             .then(res => console.log('server side response :', res))
 
     };
-
     const handleImageUpload = event => {
         // console.log(event.target.files[0])
         const imageData = new FormData();
@@ -48,16 +44,17 @@ const AddServices = () => {
 
 
     }
-
     return (
         <div>
             <h5 className="header text-center"> Have Idea 🤔 About New Food <br />Add Food & Grocery items</h5>
             <div className="form-container mt-4 p-5">
                 <form className="field w-50 justify-content-center" onSubmit={handleSubmit(onSubmit)}>
 
-                    <input name="name" className="form" required defaultValue="Service Name" {...register("name")} />
+                    <input name="name" className="form" required defaultValue="Your Name" {...register("name")} />
                     <input name="type" className="form" required defaultValue="Service Type" {...register("type")} />
-                    <input name="description" className="form" required defaultValue="Write Something" type="text"  {...register("description")} />
+                    <input name="description" className="form" required defaultValue="Write Your Views" type="text"  {...register("description")} />
+                    <br />
+                    <input name="satisfactionLevel" className="form" required defaultValue="Your Marks Out Of 10 " type="text"  {...register("satisfactionLevel")} />
                     <br />
 
                     <br />
@@ -70,4 +67,4 @@ const AddServices = () => {
     );
 };
 
-export default AddServices;
+export default AddReview;

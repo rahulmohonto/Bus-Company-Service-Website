@@ -20,7 +20,7 @@ const Navbar = () => {
                             <Link className="nav-link mr-3" to="/home">Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link mr-3" to="/services">Services</Link>
+                            <Link className="nav-link mr-3" to="/addReviews">Reviews</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link mr-3" to="/about"> About Us</Link>
