@@ -4,7 +4,7 @@ import './ShowReviews.css'
 const ShowReviews = (props) => {
 
     console.log(props);
-    const { name, image, description, satisfactionlevel } = props.review
+    const { name, image, description, satisfactionLevel } = props.review
     return (
         <section className="container col-md-3 card-div2 mt-3">
 
@@ -13,10 +13,10 @@ const ShowReviews = (props) => {
                     <div className="card-image-holder bg-info">
                         <img src={image} className="img-fluid card-image" alt="/" />
                     </div>
-                    <div className="card-body mt-5">
+                    <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">{description}</p>
-                        <footer className="">Satisfaction Level : {satisfactionlevel}</footer>
+                        <footer className="">Satisfaction Level : {satisfactionLevel}</footer>
                     </div>
                 </div>
             </div>

@@ -6,13 +6,13 @@
     height:22rem;
 }
 .card-image-holder{
-    height:3rem;
-    margin-bottom:55px;
+    height:10rem;
+    /* margin-bottom:55px; */
 
 }
 .card-image{
     height:90%;
-   padding:1rem 1.5rem ;
+   padding:.7rem 1.5rem ;
    border-radius: 50%;
    /* background-color:rgb(196, 226, 166); */
    border-image: linear-gradient(to right, rgb(171, 175, 166));

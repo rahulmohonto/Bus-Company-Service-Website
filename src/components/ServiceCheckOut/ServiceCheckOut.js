@@ -36,9 +36,11 @@ const ServiceCheckOut = () => {
 
     )
     console.log(result)
+
+
     const handleServiceOrder = () => {
 
-        const newOrder = { ...loggedInUser, ...result }
+        const newOrder = { ...loggedInUser, ...result, orderTime: new Date() }
         fetch('https://rocky-ocean-05457.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -86,12 +88,12 @@ const ServiceCheckOut = () => {
                         <ProcessPayment />
                     </div>
                     <div className="select-review-section d-flex align-items-center mt-5 mb-5">
-                        <div className="col-md-6">
-                            <Button to="/orders" onClick={handleServiceOrder} className="btn btn-info float-right">Select Service</Button>
+                        <div className="col-md-6 ">
+                            <Button to="/orders" onClick={handleServiceOrder} className="btn btn-info ml-5">Select Service</Button>
                         </div>
                         <div className="col-md-6">
                             <h4 className="text-center">Tell Us How Was Your Experience</h4>
-                            <button className="text-center btn-brand rounded p-1" type="btn btn-info"> <Link style={{ textDecoration: 'none' }} className="" to="/addReviews">Add Reviews</Link></button>
+                            <button className="text-center ml-5 btn-brand rounded p-1" type="btn btn-info"> <Link style={{ textDecoration: 'none' }} className="" to="/addReviews">Add Reviews</Link></button>
 
                         </div>
                     </div>

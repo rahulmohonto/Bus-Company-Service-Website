@@ -31,14 +31,15 @@ const Login = () => {
             const errorMessage = error.message;
             console.log(errorMessage);
         });
+
+
     }
 
     const storeAuthToken = () => {
         firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
             .then(function (idToken) {
                 sessionStorage.setItem('token', idToken);
-
-                console.log(idToken)
+                // console.log(idToken)
             }).catch(function (error) {
                 console.log(error)
             });

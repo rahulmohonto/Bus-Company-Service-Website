@@ -22,7 +22,7 @@ const ShowOrderedServices = (props) => {
 
 
     const updateData = _id => {
-        fetch(`https://rocky-ocean-05457.herokuapp.com/allOrders/${id}`)
+        fetch(`https://rocky-ocean-05457.herokuapp.com/orderById/${id}`)
             .then(res => res.json())
             .then(data =>
                 console.log(data))

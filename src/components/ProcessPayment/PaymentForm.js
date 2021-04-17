@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import {
     useStripe,
     useElements,
@@ -6,6 +6,7 @@ import {
     CardCvcElement,
     CardExpiryElement
 } from "@stripe/react-stripe-js";
+import { set } from "react-hook-form";
 
 
 
@@ -38,13 +39,14 @@ const PaymentForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const options = useOptions();
+    const [error, setError] = useState(null)
+    const [success, setSuccess] = useState(null)
 
     const handleSubmit = async event => {
         event.preventDefault();
 
         if (!stripe || !elements) {
-            // Stripe.js has not loaded yet. Make sure to disable
-            // form submission until Stripe.js has loaded.
+
             return;
         }
 
@@ -52,71 +54,90 @@ const PaymentForm = () => {
             type: "card",
             card: elements.getElement(CardNumberElement)
         });
-        console.log("[PaymentMethod]", payload);
+        if (error) {
+            setError(error.message);
+            setSuccess(null);
+            console.log(error);
+        } else {
+            setSuccess(payload.id)
+            setError(null);
+
+            console.log("[PaymentMethod]", payload);
+        }
+
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Card number
+        <div className="container payment-form-holder">
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Card number
         <CardNumberElement
-                    options={options}
-                    onReady={() => {
-                        console.log("CardNumberElement [ready]");
-                    }}
-                    onChange={event => {
-                        console.log("CardNumberElement [change]", event);
-                    }}
-                    onBlur={() => {
-                        console.log("CardNumberElement [blur]");
-                    }}
-                    onFocus={() => {
-                        console.log("CardNumberElement [focus]");
-                    }}
-                />
-            </label>
-            <br />
-            <label>
-                Expiration date
+                        options={options}
+                        onReady={() => {
+                            console.log("CardNumberElement [ready]");
+                        }}
+                        onChange={event => {
+                            console.log("CardNumberElement [change]", event);
+                        }}
+                        onBlur={() => {
+                            console.log("CardNumberElement [blur]");
+                        }}
+                        onFocus={() => {
+                            console.log("CardNumberElement [focus]");
+                        }}
+                    />
+                </label>
+                <br />
+                <label>
+                    Expiration date
         <CardExpiryElement
-                    options={options}
-                    onReady={() => {
-                        console.log("CardNumberElement [ready]");
-                    }}
-                    onChange={event => {
-                        console.log("CardNumberElement [change]", event);
-                    }}
-                    onBlur={() => {
-                        console.log("CardNumberElement [blur]");
-                    }}
-                    onFocus={() => {
-                        console.log("CardNumberElement [focus]");
-                    }}
-                />
-            </label>
-            <br />
-            <label>
-                CVC
+                        options={options}
+                        onReady={() => {
+                            console.log("CardNumberElement [ready]");
+                        }}
+                        onChange={event => {
+                            console.log("CardNumberElement [change]", event);
+                        }}
+                        onBlur={() => {
+                            console.log("CardNumberElement [blur]");
+                        }}
+                        onFocus={() => {
+                            console.log("CardNumberElement [focus]");
+                        }}
+                    />
+                </label>
+                <br />
+                <label>
+                    CVC
         <CardCvcElement
-                    options={options}
-                    onReady={() => {
-                        console.log("CardNumberElement [ready]");
-                    }}
-                    onChange={event => {
-                        console.log("CardNumberElement [change]", event);
-                    }}
-                    onBlur={() => {
-                        console.log("CardNumberElement [blur]");
-                    }}
-                    onFocus={() => {
-                        console.log("CardNumberElement [focus]");
-                    }}
-                />
-            </label><br />
-            <button type="submit" disabled={!stripe}>
-                Pay
+                        options={options}
+                        onReady={() => {
+                            console.log("CardNumberElement [ready]");
+                        }}
+                        onChange={event => {
+                            console.log("CardNumberElement [change]", event);
+                        }}
+                        onBlur={() => {
+                            console.log("CardNumberElement [blur]");
+                        }}
+                        onFocus={() => {
+                            console.log("CardNumberElement [focus]");
+                        }}
+                    />
+                </label>
+                <br />
+                <button className="btn btn-brand" type="submit" >
+                    Pay
       </button>
-        </form>
+            </form>
+            {
+                error && <p style={{ color: 'red' }}>{error.message}</p>
+            }
+            {
+                success && <p style={{ color: 'green' }}>Payment Successful</p>
+            }
+        </div>
     );
 };
 

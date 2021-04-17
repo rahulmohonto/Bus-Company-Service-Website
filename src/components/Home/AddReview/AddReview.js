@@ -45,14 +45,14 @@ const AddReview = () => {
 
     }
     return (
-        <div>
+        <div className="container">
             <h5 className="header text-center"> Thinking About  🤔 Adding New service<br />Add Service With Image</h5>
             <div className="container form-container mt-4 p-5">
                 <form className="field w-50 justify-content-center" onSubmit={handleSubmit(onSubmit)}>
 
                     <input name="name" className="form-control" required defaultValue="Your Name" {...register("name")} />
                     <br />
-                    <input name="type" className="form-control" required defaultValue="Service Type" {...register("type")} />
+                    <input name="serviceType" className="form-control" required defaultValue="Service Type" {...register("serviceType")} />
                     <br />
                     <input name="description" className="form-control" required defaultValue="Write Your Views" type="text"  {...register("description")} />
                     <br />
