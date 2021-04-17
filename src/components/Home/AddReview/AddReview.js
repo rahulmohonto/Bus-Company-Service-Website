@@ -15,7 +15,7 @@ const AddReview = () => {
             serviceType: data.serviceType,
             satisfactionLevel: data.satisfactionLevel
         }
-        const url = `http://localhost:5700/addReviews`;
+        const url = `https://rocky-ocean-05457.herokuapp.com/addReviews`;
         console.log(eventData)
         fetch(url, {
             method: 'POST',

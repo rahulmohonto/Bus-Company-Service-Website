@@ -23,7 +23,7 @@ const ServiceCheckOut = () => {
     console.log(_id)
     useEffect(() => {
         async function fetchData() {
-            await axios.get(`http://localhost:5700/services`)
+            await axios.get(`https://rocky-ocean-05457.herokuapp.com/services`)
 
                 .then(res => setCheckOut(res.data))
             // console.log(checkOut)
@@ -39,7 +39,7 @@ const ServiceCheckOut = () => {
     const handleServiceOrder = () => {
 
         const newOrder = { ...loggedInUser, ...result }
-        fetch('http://localhost:5700/orders', {
+        fetch('https://rocky-ocean-05457.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newOrder)

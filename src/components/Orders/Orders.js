@@ -6,7 +6,7 @@ const Orders = () => {
     const [orderService, setOrderService] = useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(() => {
-        fetch('http://localhost:5700/showOrders?email=' + loggedInUser.email, {
+        fetch('https://rocky-ocean-05457.herokuapp.com/showOrders?email=' + loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

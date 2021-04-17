@@ -8,7 +8,7 @@ const AllServices = () => {
 
     useEffect(() => {
         async function fetchData() {
-            await axios.get('http://localhost:5700/services')
+            await axios.get('https://rocky-ocean-05457.herokuapp.com/services')
                 .then(res => setDeleteService(res.data));
         }
         fetchData()
@@ -17,7 +17,7 @@ const AllServices = () => {
 
     const deleteData = id => {
         // console.log(event.target)
-        fetch(`http://localhost:5700/deleteService/${id}`, {
+        fetch(`https://rocky-ocean-05457.herokuapp.com/deleteService/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

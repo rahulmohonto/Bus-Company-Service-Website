@@ -8,7 +8,7 @@ const OrderedServices = () => {
 
     useEffect(() => {
         async function fetchData() {
-            await axios.get('http://localhost:5700/allOrders')
+            await axios.get('https://rocky-ocean-05457.herokuapp.com/allOrders')
                 .then(res => setOrdered(res.data))
         } fetchData()
     }, [ordered])

@@ -19,7 +19,7 @@ const AddServices = () => {
             serviceType: data.serviceType,
             serviceCost: data.serviceCost
         }
-        const url = `http://localhost:5700/addServices`;
+        const url = `https://rocky-ocean-05457.herokuapp.com/addServices`;
         console.log(eventData)
         fetch(url, {
             method: 'POST',

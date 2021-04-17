@@ -9,7 +9,7 @@ const ShowOrderedServices = (props) => {
 
     // useEffect(() => {
     //     async function fetchData() {
-    //         await axios.get(`http://localhost:5700/orderById/${id}`)
+    //         await axios.get(`https://rocky-ocean-05457.herokuapp.com/orderById/${id}`)
     //             .then(res => {
     //                 setItem(res.data)
     //                 console.log(item)
@@ -22,7 +22,7 @@ const ShowOrderedServices = (props) => {
 
 
     const updateData = _id => {
-        fetch(`http://localhost:5700/allOrders/${id}`)
+        fetch(`https://rocky-ocean-05457.herokuapp.com/allOrders/${id}`)
             .then(res => res.json())
             .then(data =>
                 console.log(data))
