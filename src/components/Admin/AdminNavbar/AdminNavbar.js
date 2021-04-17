@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Link
 } from "react-router-dom";
-import BusLogo from '../../../images/bus1.jpg';
+
 
 
 const AdminNavbar = () => {
