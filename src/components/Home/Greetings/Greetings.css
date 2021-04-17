@@ -13,3 +13,11 @@
     width:4rem;
     height:4rem;
 }
+
+.icon-holder img:hover {
+    display: inline-block;
+    transform: scale(1.2);
+}
+.greeting-image img:hover{
+    transform: rotate(-90deg);
+}

@@ -21,12 +21,14 @@ const Reviews = () => {
             <div className="container text-secondary mt-5 mb-5">
                 <h3 className="text-center mt-5 mb-5">Some FeedBacks Of Our Customers</h3>
                 <div className="row">
+
                     {
                         reviews.map(review => <ShowReviews key={review.id} review={review}></ShowReviews>)
                     }
                 </div>
             </div>
-        </section>
+
+        </section >
     );
 };
 

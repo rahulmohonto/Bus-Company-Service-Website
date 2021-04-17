@@ -7,3 +7,15 @@
     height:60px;
     width:60px;
 }
+.navSide li:hover span{
+    display: inline-block;
+    transform: scale(1.2);
+}
+.busLogo:hover{
+    transform: scale(1.9);
+    transition: transform .5s ease-in;
+}
+.icon-header{
+    transform: rotate(360deg);
+    transition: transform .8s ease-in;
+}

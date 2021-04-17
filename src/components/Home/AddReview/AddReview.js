@@ -47,18 +47,21 @@ const AddReview = () => {
     return (
         <div>
             <h5 className="header text-center"> Have Idea 🤔 About New Food <br />Add Food & Grocery items</h5>
-            <div className="form-container mt-4 p-5">
+            <div className="container form-container mt-4 p-5">
                 <form className="field w-50 justify-content-center" onSubmit={handleSubmit(onSubmit)}>
 
-                    <input name="name" className="form" required defaultValue="Your Name" {...register("name")} />
-                    <input name="type" className="form" required defaultValue="Service Type" {...register("type")} />
-                    <input name="description" className="form" required defaultValue="Write Your Views" type="text"  {...register("description")} />
+                    <input name="name" className="form-control" required defaultValue="Your Name" {...register("name")} />
                     <br />
-                    <input name="satisfactionLevel" className="form" required defaultValue="Your Marks Out Of 10 " type="text"  {...register("satisfactionLevel")} />
+                    <input name="type" className="form-control" required defaultValue="Service Type" {...register("type")} />
+                    <br />
+                    <input name="description" className="form-control" required defaultValue="Write Your Views" type="text"  {...register("description")} />
+                    <br />
+                    <input name="satisfactionLevel" className="form-control" required defaultValue="Your Marks Out Of 10 " type="text"  {...register("satisfactionLevel")} />
                     <br />
 
+
+                    <input name="exampleRequired" required className="form-control" type="file" onChange={handleImageUpload} /><br />
                     <br />
-                    <input name="exampleRequired" required className="form" type="file" onChange={handleImageUpload} />
 
                     <input className="form" type="submit" />
                 </form>

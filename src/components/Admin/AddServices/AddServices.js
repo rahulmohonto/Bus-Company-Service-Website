@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import './AddServices.css';
 
 
 
@@ -16,7 +17,7 @@ const AddServices = () => {
             image: image,
             description: data.description,
             serviceType: data.serviceType,
-            quantity: data.quantity
+            serviceCost: data.serviceCost
         }
         const url = `http://localhost:5700/addServices`;
         console.log(eventData)
@@ -50,18 +51,19 @@ const AddServices = () => {
     }
 
     return (
-        <div>
-            <h5 className="header text-center"> Have Idea 🤔 About New Food <br />Add Food & Grocery items</h5>
-            <div className="form-container mt-4 p-5">
-                <form className="field w-50 justify-content-center" onSubmit={handleSubmit(onSubmit)}>
+        <div className="container form-container">
+            <h3 className="header text-center"> Thinking About  🤔 New Service <br />Add Service & Modify Service</h3>
+            <div className="mt-4 p-5 form-holder-div">
+                <form className="field justify-content-center" onSubmit={handleSubmit(onSubmit)}>
 
-                    <input name="name" className="form" required defaultValue="Service Name" {...register("name")} />
-                    <input name="type" className="form" required defaultValue="Service Type" {...register("type")} />
-                    <input name="description" className="form" required defaultValue="Write Something" type="text"  {...register("description")} />
+                    <input name="name" className="form-control mb-3" required defaultValue="Service Name" {...register("name")} /><br />
+                    <input name="serviceType" className="form-control mb-3" required defaultValue="Service Type" {...register("type")} /><br />
+                    <input name="serviceCost" className="form-control mb-3" required defaultValue="Service Charge" {...register("serviceCost")} /><br />
+                    <input name="description" className="form-control mb-3" required defaultValue="Write Something" type="text"  {...register("description")} />
                     <br />
 
                     <br />
-                    <input name="exampleRequired" required className="form" type="file" onChange={handleImageUpload} />
+                    <input name="exampleRequired" required className="form-control" type="file" onChange={handleImageUpload} /><br />
 
                     <input className="form" type="submit" />
                 </form>

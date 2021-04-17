@@ -17,3 +17,7 @@
    /* background-color:rgb(196, 226, 166); */
    border-image: linear-gradient(to right, rgb(171, 175, 166));
 }
+.card-image-holder img:hover{
+    width:220px;
+    transition: width 1.5s ease-in-out;
+}

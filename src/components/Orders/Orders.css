@@ -1,0 +1,25 @@
+.order-list{
+    position: relative;
+    background-color:lightslategray;
+    width:60%;
+    /* margin-left:20%; */
+    padding:10px 10px;
+    border-radius:20px
+}
+.service-container{
+border-radius: 10px;
+color:darkblue;
+}
+
+@media (max-width:'592px'){
+    .service-container{
+        display:grid;
+        width:50%;
+    }
+}
+@media (max-width:'592px'){
+    .table-holder{
+        width:200px !important;
+        position: absolute;
+    }
+}

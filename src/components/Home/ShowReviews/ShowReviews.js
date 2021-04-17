@@ -6,8 +6,9 @@ const ShowReviews = (props) => {
     console.log(props);
     const { name, image, description, satisfactionlevel } = props.review
     return (
-        <section className="container card-div2 mt-3 bg-info">
-            <div className="col-md-3 mx-5 my-3 text-center justify-content-center align-items-center">
+        <section className="container col-md-3 card-div2 mt-3">
+
+            <div className="my-3 text-center justify-content-center align-items-center">
                 <div className="card card-main" style={{ width: '16rem' }}>
                     <div className="card-image-holder bg-info">
                         <img src={image} className="img-fluid card-image" alt="/" />
@@ -19,6 +20,7 @@ const ShowReviews = (props) => {
                     </div>
                 </div>
             </div>
+
         </section>
     );
 };
