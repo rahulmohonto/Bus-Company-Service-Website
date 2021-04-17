@@ -46,7 +46,7 @@ const AddReview = () => {
     }
     return (
         <div>
-            <h5 className="header text-center"> Have Idea 🤔 About New Food <br />Add Food & Grocery items</h5>
+            <h5 className="header text-center"> Thinking About  🤔 Adding New service<br />Add Service With Image</h5>
             <div className="container form-container mt-4 p-5">
                 <form className="field w-50 justify-content-center" onSubmit={handleSubmit(onSubmit)}>
 
