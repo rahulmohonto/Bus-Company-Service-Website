@@ -15,7 +15,7 @@ const useOptions = () => {
         () => ({
             style: {
                 base: {
-                    fontSize: '16px',
+
                     color: "#424770",
                     letterSpacing: "0.025em",
                     fontFamily: "Source Code Pro, monospace",
@@ -28,13 +28,13 @@ const useOptions = () => {
                 }
             }
         }),
-        [fontSize]
+        []
     );
 
     return options;
 };
 
-const SplitForm = () => {
+const PaymentForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const options = useOptions();
@@ -43,6 +43,8 @@ const SplitForm = () => {
         event.preventDefault();
 
         if (!stripe || !elements) {
+            // Stripe.js has not loaded yet. Make sure to disable
+            // form submission until Stripe.js has loaded.
             return;
         }
 
@@ -73,6 +75,7 @@ const SplitForm = () => {
                     }}
                 />
             </label>
+            <br />
             <label>
                 Expiration date
         <CardExpiryElement
@@ -91,6 +94,7 @@ const SplitForm = () => {
                     }}
                 />
             </label>
+            <br />
             <label>
                 CVC
         <CardCvcElement
@@ -108,12 +112,12 @@ const SplitForm = () => {
                         console.log("CardNumberElement [focus]");
                     }}
                 />
-            </label>
-            <button className="btn btn-brand" type="submit" disabled={!stripe}>
+            </label><br />
+            <button type="submit" disabled={!stripe}>
                 Pay
       </button>
         </form>
     );
 };
 
-export default SplitForm;
+export default PaymentForm;
