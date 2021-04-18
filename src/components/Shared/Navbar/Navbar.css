@@ -19,3 +19,7 @@
     transform: rotate(360deg);
     transition: transform .8s ease-in;
 }
+.icon-header h3:hover{
+    transform: scale(1.8);
+    transition: transform .5s ease-in-out;
+}

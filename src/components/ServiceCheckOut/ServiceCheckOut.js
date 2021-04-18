@@ -17,7 +17,7 @@ import './ServiceCheckOut.css'
 const ServiceCheckOut = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    // console.log(setLoggedInUser)
+    console.log(setLoggedInUser)
     const [checkOut, setCheckOut] = useState([]);
     const { _id } = useParams();
     console.log(_id)

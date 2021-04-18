@@ -9,7 +9,7 @@ const ShowReviews = (props) => {
         <section className="container col-md-3 card-div2 mt-3">
 
             <div className="my-3 text-center justify-content-center align-items-center">
-                <div className="card card-main" style={{ width: '16rem' }}>
+                <div className="card card-main" style={{ width: '16rem',height:'28rem' }}>
                     <div className="card-image-holder bg-info">
                         <img src={image} className="img-fluid card-image" alt="/" />
                     </div>

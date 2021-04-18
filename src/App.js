@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { createContext, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
 import Admin from './components/Admin/Admin/Admin';

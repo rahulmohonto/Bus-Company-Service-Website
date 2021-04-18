@@ -32,8 +32,13 @@
     align-items: center;
 }
 .socialLogo{
-height:100px;
-width: 100px;
+height:200px;
+width: 200px;
+border-radius:50%;
+}
+.socialLogo:hover{
+    transform: scale(1.5);
+    transition: transform .95s ease-in-out;
 }
 .buslogo{
     height:100px;

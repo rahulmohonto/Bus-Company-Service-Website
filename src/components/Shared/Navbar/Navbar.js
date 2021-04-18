@@ -7,7 +7,7 @@ import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBus } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = () => {
+const NavbarTop = () => {
     return (
         <section className="container navbar-container mb-5">
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -47,4 +47,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavbarTop;

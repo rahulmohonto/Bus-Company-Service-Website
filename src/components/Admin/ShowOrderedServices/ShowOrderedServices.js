@@ -17,11 +17,8 @@ const ShowOrderedServices = (props) => {
 
         fetchData();
 
-    }, [item])
+    }, [id])
 
-    const handleSubmit = () => {
-        console.log('clicked')
-    }
 
     return (
         <section className="container">

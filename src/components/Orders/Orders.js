@@ -18,7 +18,7 @@ const Orders = () => {
 
 
     }, [loggedInUser.email])
-    // console.log(setLoggedInUser)
+    console.log(setLoggedInUser);
     return (
         <section className="container text-center bg-success p-4 service-container ">
 

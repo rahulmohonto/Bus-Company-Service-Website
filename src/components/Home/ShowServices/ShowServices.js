@@ -18,7 +18,7 @@ const ShowServices = (props) => {
     return (
         <div className="col-md-3  my-3 text-center justify-content-center align-items-center card-div">
 
-            <Card onClick={() => handleSelectService(_id)} className="card-holder text-info" style={{ width: '18rem', height: '26rem', margin: '20px' }}>
+            <Card onClick={() => handleSelectService(_id)} className="card-holder text-info" style={{ width: '18rem', height: '29rem', margin: '20px' }}>
                 <Card.Img className="cardImage" style={{ height: '13rem' }} variant="top" src={image} />
                 <Card.Body>
                     <div className="text-center">

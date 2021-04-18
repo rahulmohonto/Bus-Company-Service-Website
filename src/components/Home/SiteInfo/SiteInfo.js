@@ -4,79 +4,17 @@ import {
 } from "react-router-dom";
 import './SiteInfo.css';
 import busRepairImage from '../../../images/repair.jpg';
-import socialIcon from '../../../images/facebook1.jpg';
+import socialIcon from '../../../images/fb.png';
 import socialIcon2 from '../../../images/youtube.jpg'
-import socialIcon3 from '../../../images/whatsapp.webp';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faFacebook, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import socialIcon3 from '../../../images/whattsapp.png';
 
-
-library.add(fab, faFacebook, faYoutube, faWhatsapp)
 
 
 const SiteInfo = () => {
     return (
         <section id="contact" className="container contact-section">
 
-            {/* <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item contact1 active">
-                        <div className="row d-flex align-items-center justify-content-around">
-                            <div className="col-md-7">
-                                <h1>Join us on Facebook</h1>
-                                <a className="facebook-link" to="https//:www.karl_fashion.com">Visit Facebook</a>
-                            </div>
-                            <div className="col-md-5 mt-5 align-items-center facebook-icon">
-                                <img src={socialIcon} className="d-block w-100 " alt="..." />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="carousel-item contact1">
-                        <div className="row d-flex align-items-center justify-content-around">
-                            <div className="col-md-8 mt-3">
-                                <h1>Mail us about your feedback <br />& problems</h1>
-                                <input type="form" className="form mt-1" value="email" />
-                                <button type="button" className="btn btn-primary px-4">Send</button>
-                                <form className="sign up-form mt-5">
-                                    <div className="mb-3">
-                                        <label for="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                                    </div>
-                                    <div className="mb-3">
-                                        <label for="exampleInputPassword1" className="form-label">Password</label>
-                                        <input type="password" className="form-control" id="exampleInputPassword1" />
-                                    </div>
-                                    <div className="mb-3 form-check">
-                                        <button type="button" className="btn text-white">Sign Up</button>
-                                    </div>
 
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className="carousel-item contact1">
-                        <div className="row d-flex align-items-center">
-                            <div className="col-md-7">
-                                <h1> Call us in 959714321 <br />for Any inquiery</h1>
-                            </div>
-                            <div className="col-md-5 call">
-                                <img src={busRepairImage} className="d-block w-100 call-icon" alt="..." />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </a>
-            </div> */}
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div className="carousel-item contact1 active">
@@ -87,13 +25,19 @@ const SiteInfo = () => {
 
                             </div> */}
                             <div className="col-md-3 mt-5 align-items-center facebook-icon bg-brand">
-                                <Link to="https://www.youtube.com">  <FontAwesomeIcon className="socialLogo mr-5" icon={faYoutube} /></Link>
-                            </div>
-                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-info">
-                                <Link to="https://www.facebook.com"> <FontAwesomeIcon className="socialLogo mr-5" icon={faFacebook} /></Link>
+                                <Link to="https://www.facebook.com"> 
+                                <img src={socialIcon} alt="/" className="img-fluid socialLogo"/>
+                                 </Link>
                             </div>
                             <div className="col-md-3 mt-5 align-items-center facebook-icon bg-brand">
-                                <Link to="https://www.whatspp.com"><FontAwesomeIcon className="socialLogo mr-5" icon={faWhatsapp} /></Link>
+                                <Link to="https://www.youtube.com"> 
+                                <img src={socialIcon2} alt="/" className="img-fluid socialLogo"/>
+                                </Link>
+                            </div>
+                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-brand">
+                                <Link to="https://www.whatspp.com">
+                                <img src={socialIcon3} alt="/" className="img-fluid socialLogo"/>
+                                    </Link>
                             </div>
                         </div>
                     </div>
@@ -122,7 +66,7 @@ const SiteInfo = () => {
                     <div class="carousel-item">
                         <div className="row d-flex align-items-center">
                             <div className="col-md-8">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate id asperiores, harum maiores possimus repudiandae corporis impedit quod ipsam expedita?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus laudantium iste mollitia! Voluptates tenetur voluptatibus facere, dolores iste accusamus asperiores esse optio itaque! Quasi repellendus dolorum nam. Asperiores, labore. Repellat porro ab exercitationem maxime rerum reprehenderit, dolore quas placeat dolorum quaerat adipisci, possimus libero molestiae cum dignissimos? Corporis, incidunt?</p>
+                                <p>We Provide professional service center staffed by factory trained technicians which has an outstanding reputation with other motorcoach companies, motorhome owners, and entertainer coach operators. Elite Coach’s Service department is a full service facility serving Prevost, MCI & Temsa motorcoaches and Class A motorhomes and offers emergency roadside services. B_R_R_COMPANY also has a drive through wash bay with full service washes available.We provide roadside assistance service for private motorcoaches and charter buses accross various states.We Know how much the value of peoples lives, thats why we also provide rent,bus driving traning, servicing, repair and paintjob.We put our customers interest above everything.  </p>
                             </div>
                             <div className="col-md-4 call">
                                 <img src={busRepairImage} className="d-block w-100 call-icon" alt="..." />
