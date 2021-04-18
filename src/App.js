@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import AddReview from './components/Home/AddReview/AddReview';
 import ServiceCheckOut from './components/ServiceCheckOut/ServiceCheckOut';
 import Orders from './components/Orders/Orders';
+import Blogs from './components/Home/Blogs/Blogs';
 
 
 export const UserContext = createContext();
@@ -38,6 +39,9 @@ function App() {
           </PrivateRoute>
           <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/blogs">
+            <Blogs />
           </Route>
           <PrivateRoute path="/addReviews">
             <AddReview />
