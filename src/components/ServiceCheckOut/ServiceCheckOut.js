@@ -40,7 +40,9 @@ const ServiceCheckOut = () => {
 
     const handleServiceOrder = () => {
 
-        const newOrder = { ...loggedInUser, ...result, orderTime: new Date() }
+        const userEmail = loggedInUser.email;
+        const serviceStatus = "";
+        const newOrder = { ...loggedInUser, ...result, serviceStatus, orderTime: new Date(), userEmail }
         fetch('https://rocky-ocean-05457.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

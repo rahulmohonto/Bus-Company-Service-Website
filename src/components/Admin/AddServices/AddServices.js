@@ -32,6 +32,22 @@ const AddServices = () => {
 
     };
 
+    const onSubmitForm =data => {
+        const eventData = {
+            name:data.name,
+            email:data.email
+        }
+        const url = `https://rocky-ocean-05457.heroku.com/addAdmin`;
+        fetch(url,{
+            method:'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(eventData)
+        })
+        .then(res => console.log('server response', res))
+    }
+
     const handleImageUpload = event => {
         // console.log(event.target.files[0])
         const imageData = new FormData();
@@ -53,20 +69,30 @@ const AddServices = () => {
     return (
         <div className="container form-container">
             <h3 className="header text-center"> Thinking About  🤔 New Service <br />Add Service & Modify Service</h3>
-            <div className="mt-4 p-5 form-holder-div">
-                <form className="field justify-content-center" onSubmit={handleSubmit(onSubmit)}>
+            <div className="d-flex align-aitems-center">
+                <div className="mt-4 p-5 form-holder-div">
+                    <form className="field justify-content-center" onSubmit={handleSubmit(onSubmit)}>
 
-                    <input name="name" className="form-control mb-3" required defaultValue="Service Name" {...register("name")} /><br />
-                    <input name="serviceType" className="form-control mb-3" required defaultValue="Service Type" {...register("type")} /><br />
-                    <input name="serviceCost" className="form-control mb-3" required defaultValue="Service Charge" {...register("serviceCost")} /><br />
-                    <input name="description" className="form-control mb-3" required defaultValue="Write Something" type="text"  {...register("description")} />
-                    <br />
+                        <input name="name" className="form-control mb-3" required defaultValue="Service Name" {...register("name")} /><br />
+                        <input name="serviceType" className="form-control mb-3" required defaultValue="Service Type" {...register("type")} /><br />
+                        <input name="serviceCost" className="form-control mb-3" required defaultValue="Service Charge" {...register("serviceCost")} /><br />
+                        <input name="description" className="form-control mb-3" required defaultValue="Write Something" type="text"  {...register("description")} />
+                        <br />
 
-                    <br />
-                    <input name="exampleRequired" required className="form-control" type="file" onChange={handleImageUpload} /><br />
+                        <br />
+                        <input name="exampleRequired" required className="form-control" type="file" onChange={handleImageUpload} /><br />
 
-                    <input className="form" type="submit" />
-                </form>
+                        <input className="form" type="submit" />
+                    </form>
+                </div>
+                <div>
+                    <h4 className="text-cnter">Add Admin</h4>
+                <form className="field justify-content-center" onSubmitForm={handleSubmit(onSubmitForm)}>
+
+<input name="name" className="form-control mb-3" required defaultValue="Admin Name" {...register("name")} /><br />
+<input name="email" className="form-control mb-3" required defaultValue="Admin Email" {...register("email")} /><br />
+</form>
+                </div>
             </div>
         </div>
     );

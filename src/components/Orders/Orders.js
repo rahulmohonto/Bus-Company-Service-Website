@@ -42,7 +42,7 @@ const Orders = () => {
                             <tr>
                                 <th>{order[0].name}</th>
                                 <th>{order[0].description}</th>
-                                <th>Pending</th>
+                                <th>{order[0].serviceStatus}</th>
                             </tr>
                         </thead>
                     </table>
