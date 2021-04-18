@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Home from '../../Home/Home/Home';
 import PrivateRoute from '../../PrivateRoute/PrivateRoute';
+import ShowAdmin from './ShowAdmin/ShowAdmin';
 
 
 
@@ -30,6 +31,9 @@ const Admin = () => {
                 </PrivateRoute>
                 <PrivateRoute path="/addServices">
                     <AddServices></AddServices>
+                </PrivateRoute>
+                <PrivateRoute path="/showAdmins">
+                    <ShowAdmin></ShowAdmin>
                 </PrivateRoute>
             </Switch>
         </Router>

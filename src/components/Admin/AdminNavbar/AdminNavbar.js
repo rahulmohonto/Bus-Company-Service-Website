@@ -28,6 +28,9 @@ const AdminNavbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link mr-3 " to="/addServices">Add Services</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link mr-3 " to="/showAdmins">Admins</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

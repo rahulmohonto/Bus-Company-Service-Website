@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import AddAdmin from '../AddAdmin/AddAdmin';
 import './AddServices.css';
 
 
@@ -32,21 +33,6 @@ const AddServices = () => {
 
     };
 
-    const onSubmitForm = data => {
-        const eventData = {
-            name: data.name,
-            email: data.email
-        }
-        const url = `https://rocky-ocean-05457.heroku.com/addAdmin`;
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(eventData)
-        })
-            .then(res => console.log('server response', res))
-    }
 
     const handleImageUpload = event => {
         // console.log(event.target.files[0])
@@ -69,7 +55,7 @@ const AddServices = () => {
     return (
         <div className="container form-container">
             <h3 className="header text-center"> Thinking About  🤔 New Service <br />Add Service & Modify Service</h3>
-            <div className="d-flex align-aitems-center">
+            <div className="align-aitems-center">
                 <div className="mt-4 p-5 form-holder-div">
                     <form className="field justify-content-center" onSubmit={handleSubmit(onSubmit)}>
 
@@ -85,15 +71,7 @@ const AddServices = () => {
                         <input className="form" type="submit" />
                     </form>
                 </div>
-                <div>
-                    <h4 className="text-cnter">Add Admin</h4>
-                    <form className="field justify-content-center" onSubmitForm={handleSubmit(onSubmitForm)}>
-
-                        <input name="name" className="form-control mb-3" required defaultValue="Admin Name" {...register("name")} /><br />
-                        <input name="email" className="form-control mb-3" required defaultValue="Admin Email" {...register("email")} /><br />
-                        <input className="form" type="submit" />
-                    </form>
-                </div>
+                <AddAdmin></AddAdmin>
             </div>
         </div>
     );
