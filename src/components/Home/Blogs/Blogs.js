@@ -2,8 +2,9 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className="text-justify bg-brand">
-            <div className="">
+        <div className="container text-justify bg-brand">
+            <h2 className="text-center ">More About Our Company & Company Policy</h2>
+            <div className="container">
                 <h3 style={{ color: 'dodgerblue' }}>Bus Rent</h3>
                 <span>
                     <h4 style={{ color: 'pink' }}>Check out the bus rental provider</h4>
