@@ -14,22 +14,22 @@ const ShowAdmin = () => {
         }
         fetchData()
     }, [admin])
-
+    console.log(admin);
 
 
     const LoadAdmin = () => {
 
-        return admin.map(member =>
+        return admin.map(memberAdmin =>
         (
-            <div className="container service-container">
-                <div className="service-div">
+            <div className="container admin-container">
+                <div className="admin-div">
                     <Table className="table table-bordered" striped bordered hover size="lg">
 
                         <tbody>
                             <tr>
 
-                                <td> <strong>{member.name}</strong></td>
-                                <td> <span >{member.email}</span></td>
+                                <td> <strong>{memberAdmin.name}</strong></td>
+                                <td> <span >{memberAdmin.email}</span></td>
 
                             </tr>
                         </tbody>
@@ -46,8 +46,8 @@ const ShowAdmin = () => {
         <body>
             <section className="container">
                 <div id="admin-holder">
-                    <h3 className="text-center text-secondary">Total Services : {member.length}</h3>
-                    <div className="container">
+                    {/* <h3 className="text-center text-secondary">Total Admin : {memberAdmin.length}</h3> */}
+                    {/* <div className="container">
                         <table className="table table-bordered" size="lg">
                             <thead>
                                 <tr>
@@ -57,7 +57,7 @@ const ShowAdmin = () => {
                                 </tr>
                             </thead>
                         </table>
-                    </div>
+                    </div> */}
                     <LoadAdmin />
                 </div>
             </section>

@@ -7,21 +7,23 @@ const AddAdmin = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const eventData = {
+        const adminData = {
             name: data.name,
             email: data.email
         }
-        console.log(eventData)
+        console.log(adminData)
         const url = `https://rocky-ocean-05457.heroku.com/addAdmin`;
         fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(eventData)
+            body: JSON.stringify(adminData)
         })
             .then(res => console.log('server response', res))
     }
+
+
     return (
         <section className="container">
             <div>

@@ -40,28 +40,20 @@ const OrderedServices = () => {
 
 
     const LoadOrderedServices = id => {
-        // const container = document.getElementById('productHolder');
+
         return ordered.map(item =>
         (
             <div className="product-container">
                 <div className="product-div">
                     <Table className="table" striped bordered hover size="lg">
-                        {/* <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Quantity</th>
-                                <th>Type</th>
-                                <th>Price</th>
-                            </tr>
-                        </thead> */}
+
                         <tbody>
                             <tr>
                                 <td>{item[0].name}</td>
                                 <td>{item[0].serviceType}</td>
                                 <td>{item[0].description}</td>
                                 <td><button className="service-update-button" onClick={() => updateData(id)}>Update Order</button></td>
-                                {/* <td> id : {item._id}</td> */}
-                                {/* <td>  <input type="text" company=`${item.company}`></input></td> */}
+
                             </tr>
                         </tbody>
                     </Table>
@@ -74,7 +66,7 @@ const OrderedServices = () => {
 
 
     return (
-        <div>
+        <div className="container">
             <div>
                 {/* {
                     ordered.map(order => <ShowOrderedServices key={order._id} order={order}></ShowOrderedServices>)
