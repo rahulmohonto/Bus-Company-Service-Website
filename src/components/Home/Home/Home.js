@@ -5,6 +5,7 @@ import Services from '../Services/Services';
 import Reviews from '../Reviews/Reviews';
 import SiteInfo from '../SiteInfo/SiteInfo';
 import NavbarTop from '../../Shared/Navbar/Navbar';
+import Blogs from '../Blogs/Blogs';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Greetings></Greetings>
             <Services></Services>
             <Reviews></Reviews>
+            <Blogs />
             <SiteInfo></SiteInfo>
             <Footer />
         </div>
