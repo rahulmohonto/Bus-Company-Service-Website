@@ -6,7 +6,7 @@ import socialIcon2 from '../../../images/youtube.jpg'
 import socialIcon3 from '../../../images/whatsapp.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fab, faFacebook, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faFacebook, faYoutube, faWhatsapp } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faFacebook, faYoutube, faWhatsapp)
