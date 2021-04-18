@@ -4,6 +4,8 @@ import busRepairImage from '../../../images/repair.jpg';
 import socialIcon from '../../../images/facebook1.jpg';
 import socialIcon2 from '../../../images/youtube.jpg'
 import socialIcon3 from '../../../images/whatsapp.webp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBus, faYoutube, faFacebook, faWhatsapp } from '@fortawesome/free-solid-svg-icons'
 import {
     Link
 } from "react-router-dom";
@@ -79,14 +81,14 @@ const SiteInfo = () => {
 
 
                             </div> */}
-                            <div className="col-md-6 mt-5 align-items-center facebook-icon bg-light">
-                                <img src={socialIcon} className="d-block w-25 " alt="..." />
+                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-light">
+                                <FontAwesomeIcon className="busLogo mr-5" icon={faYoutube} />
                             </div>
-                            <div className="col-md-6 mt-5 align-items-center facebook-icon bg-info">
-                                <img src={socialIcon2} className="d-block w-25 " alt="..." />
+                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-info">
+                                <FontAwesomeIcon className="busLogo mr-5" icon={faFacebook} />
                             </div>
-                            <div className="col-md-6 mt-5 align-items-center facebook-icon bg-primary">
-                                <img src={socialIcon3} className="d-block w-25 " alt="..." />
+                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-primary">
+                                <FontAwesomeIcon className="busLogo mr-5" icon={faWhatsapp} />
                             </div>
                         </div>
                     </div>
