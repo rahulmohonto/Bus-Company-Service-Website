@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 import './SiteInfo.css';
 import busRepairImage from '../../../images/repair.jpg';
 import socialIcon from '../../../images/facebook1.jpg';
@@ -7,12 +10,10 @@ import socialIcon3 from '../../../images/whatsapp.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faFacebook, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { faFacebook, faYoutube, faWhatsapp } from '@fortawesome/free-solid-svg-icons'
+
 
 library.add(fab, faFacebook, faYoutube, faWhatsapp)
-import {
-    Link
-} from "react-router-dom";
+
 
 const SiteInfo = () => {
     return (
@@ -85,14 +86,14 @@ const SiteInfo = () => {
 
 
                             </div> */}
-                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-light">
-                                <FontAwesomeIcon className="busLogo mr-5" icon={faYoutube} />
+                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-brand">
+                                <Link to="https://www.youtube.com">  <FontAwesomeIcon className="socialLogo mr-5" icon={faYoutube} /></Link>
                             </div>
                             <div className="col-md-3 mt-5 align-items-center facebook-icon bg-info">
-                                <FontAwesomeIcon className="busLogo mr-5" icon={faFacebook} />
+                                <Link to="https://www.facebook.com"> <FontAwesomeIcon className="socialLogo mr-5" icon={faFacebook} /></Link>
                             </div>
-                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-primary">
-                                <FontAwesomeIcon className="busLogo mr-5" icon={faWhatsapp} />
+                            <div className="col-md-3 mt-5 align-items-center facebook-icon bg-brand">
+                                <Link to="https://www.whatspp.com"><FontAwesomeIcon className="socialLogo mr-5" icon={faWhatsapp} /></Link>
                             </div>
                         </div>
                     </div>

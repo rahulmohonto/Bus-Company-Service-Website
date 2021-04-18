@@ -27,3 +27,19 @@
     border-radius: 10px;
     box-shadow: -5px 4px 7px skyblue;
 }
+.facebook-icon{
+    height:200px;
+    align-items: center;
+}
+.socialLogo{
+height:100px;
+width: 100px;
+}
+.buslogo{
+    height:100px;
+    width:100px;
+}
+.buslogo:hover{
+    transform:scale(1.8);
+    transition:transform .5s ease-out;
+}
