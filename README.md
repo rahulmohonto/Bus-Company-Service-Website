@@ -1,6 +1,13 @@
 # Getting Started BUS-R-R_COMPANY website
+# Website depicts about A Bus Company Service website
 
 # Live Wevsite link(https://bus-client-assignment.web.app).
+
+# What this site offers
+Integrated firebase authentication method for google sign-in option.
+Limited access based on roles like user/admin
+Single handedly developed and inspired from programming hero community course.
+Realtime mongoDb database use for user data storing and loading dynamically through node.js.
 
 ## Aditional featurs
 
